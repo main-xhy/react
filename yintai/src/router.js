@@ -5,8 +5,22 @@ import {
 	Link,
 	Switch	
 } from 'react-router-dom';
-import React from "react";
+
 import App from "./components/App";
-import Home from "./Components/Home"; 
-import Library from "./Components/Library"; 
-import My from "./Components/My";  
+import Home from "./components/Home"; 
+import Library from "./components/Library"; 
+import My from "./components/My";  
+
+const router = (
+	<Router>
+		<App>
+			<Route path="/home" component = {Home}/>
+			<Route path="/library" component = {Library}/>
+			<Route path="/my" component = {My}/>
+
+		</App>
+	</Router>
+)
+
+
+export default router;
